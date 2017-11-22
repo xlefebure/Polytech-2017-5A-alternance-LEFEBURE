@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TP1</string>
+
+
+    <string name="menu_txt_1">Offline</string>
+    <string name="menu_txt_2">Online</string>
+
+    <string name="menu_btn_1">1 VS IA</string>
+    <string name="menu_btn_2">1 VS 1</string>
+    <string name="menu_btn_3">Team A VS Team B</string>
+    <string name="menu_btn_4">1 VS 1 Online</string>
+
+
+    <string name="question_text_equipe">Team B</string>
+    <string name="question_text_vie">Life : 3</string>
+    <string name="question_text_joueur">Player : Lucie</string>
+    <string name="question_text_score">Score 18</string>
+    <string name="question_text_question">What animal is this cry?</string>
+    <string name="question_text_valeur">Value : 5 pts</string>
+
+
+    <string name="question_btn_1">Dog</string>
+    <string name="question_btn_2">Cat</string>
+    <string name="question_btn_3">Horse</string>
+    <string name="question_btn_4">Cow</string>
+</resources>

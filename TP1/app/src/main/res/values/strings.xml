@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">TP1</string>
+
+
+    <string name="menu_txt_1">Offline</string>
+    <string name="menu_txt_2">Online</string>
+
+    <string name="menu_btn_1">1 VS IA</string>
+    <string name="menu_btn_2">1 VS 1</string>
+    <string name="menu_btn_3">Team A VS Team B</string>
+    <string name="menu_btn_4">1 VS 1 Online</string>
+
+
+    <string name="question_text_equipe">Equipe B</string>
+    <string name="question_text_vie">Vie : 3</string>
+    <string name="question_text_joueur">Joueur : Lucie</string>
+    <string name="question_text_score">Score 18</string>
+    <string name="question_text_question">De quel animal est-ce le cri ?</string>
+    <string name="question_text_valeur">Valeur : 5 pts</string>
+
+
+    <string name="question_btn_1">Chien</string>
+    <string name="question_btn_2">Chat</string>
+    <string name="question_btn_3">Cheval</string>
+    <string name="question_btn_4">Vache</string>
 </resources>

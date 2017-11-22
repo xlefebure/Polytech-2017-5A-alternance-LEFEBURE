@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="guideLine">0.5</dimen>
+
+    <dimen name="marginStartSmall">8dp</dimen>
+    <dimen name="marginEndSmall">8dp</dimen>
+    <dimen name="marginTopSmall">8dp</dimen>
+
+    <dimen name="marginStartMedium">16dp</dimen>
+    <dimen name="marginEndMedium">16dp</dimen>
+    <dimen name="marginTopMedium">16dp</dimen>
+
+    <dimen name="marginStartHigh">32dp</dimen>
+    <dimen name="marginEndHigh">32dp</dimen>
+    <dimen name="marginTopHigh">32dp</dimen>
+
+    <dimen name="width_null">0dp</dimen>
+
+    <dimen name="menu_btn_width">0dp</dimen>
+</resources>
