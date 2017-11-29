@@ -3,6 +3,8 @@ package com.example.xavier.tp1;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -13,12 +15,23 @@ import android.util.Log;
 
 public class FragmentContainer extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener {
 
+    private  BroadcastReceiver receiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragmentcontainer);
 
         replaceFragment(R.id.FragmentContainer, new MenuFragment());
+
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("SOME_ACTION");
+        filter.addAction("SOME_OTHER_ACTION");
+        filter.addAction("MY_NOTIFICATION");
+
+        receiver = new MyBroadcastReceiver();
+        this.registerReceiver(receiver, filter);
     }
 
     @Override
