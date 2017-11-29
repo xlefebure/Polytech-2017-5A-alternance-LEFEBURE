@@ -1,17 +1,24 @@
 package com.example.xavier.tp1;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-public class Menu extends AppCompatActivity {
+/**
+ * Created by Epulapp on 29/11/2017.
+ */
+
+public class FragmentContainer extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_fragmentcontainer);
+
+        replaceFragment(R.id.FragmentContainer, new MenuFragment());
     }
 
     @Override
@@ -48,5 +55,11 @@ public class Menu extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("onDestroy", "onDestroy");
+    }
+
+    public void replaceFragment(int id, Fragment fragment){
+        FragmentManager fm  = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction().replace(id, fragment);
+        ft.commit();
     }
 }
