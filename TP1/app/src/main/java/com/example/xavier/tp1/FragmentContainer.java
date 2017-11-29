@@ -71,8 +71,14 @@ public class FragmentContainer extends AppCompatActivity implements MenuFragment
     }
 
     @Override
-    public void onFragmentInteraction() {
-        replaceFragment(R.id.FragmentContainer, new QuestionFragment());
+    public void onFragmentInteraction(int id) {
+        if (id == 1) {
+            replaceFragment(R.id.FragmentContainer, new QuestionFragment());
+        }
+        if (id == 2) {
+            replaceFragment(R.id.FragmentContainer, new BeerListFragment());
+        }
+
     }
 
     public void replaceFragment(int id, Fragment fragment){

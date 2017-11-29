@@ -25,6 +25,8 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         Button button = (Button)view.findViewById(R.id.button);
         button.setOnClickListener(this);
+        Button button2 = (Button)view.findViewById(R.id.button2);
+        button2.setOnClickListener(this);
         return view;
     }
 
@@ -49,7 +51,12 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         switch (id) {
             case R.id.button :
                 if (mListener != null) {
-                    mListener.onFragmentInteraction();
+                    mListener.onFragmentInteraction(1);
+                }
+                break;
+            case R.id.button2 :
+                if (mListener != null) {
+                    mListener.onFragmentInteraction(2);
                 }
                 break;
         }
@@ -57,6 +64,6 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
     }
 
     public interface OnFragmentInteractionListener {
-        void onFragmentInteraction();
+        void onFragmentInteraction(int id);
     }
 }
