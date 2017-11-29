@@ -11,7 +11,7 @@ import android.util.Log;
  * Created by Epulapp on 29/11/2017.
  */
 
-public class FragmentContainer extends AppCompatActivity {
+public class FragmentContainer extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,11 @@ public class FragmentContainer extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("onDestroy", "onDestroy");
+    }
+
+    @Override
+    public void onFragmentInteraction() {
+        replaceFragment(R.id.FragmentContainer, new QuestionFragment());
     }
 
     public void replaceFragment(int id, Fragment fragment){

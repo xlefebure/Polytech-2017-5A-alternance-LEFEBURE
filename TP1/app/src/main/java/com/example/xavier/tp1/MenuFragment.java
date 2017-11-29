@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class MenuFragment extends Fragment{
+public class MenuFragment extends Fragment implements View.OnClickListener {
 
+    OnFragmentInteractionListener mListener;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,14 +21,21 @@ public class MenuFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+        Button button = (Button)view.findViewById(R.id.button);
+        button.setOnClickListener(this);
+        return view;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
+        try {
+            mListener = (OnFragmentInteractionListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement OnFragmentInteractionListener");
+        }
     }
 
     @Override
@@ -35,4 +43,20 @@ public class MenuFragment extends Fragment{
         super.onDetach();
     }
 
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        switch (id) {
+            case R.id.button :
+                if (mListener != null) {
+                    mListener.onFragmentInteraction();
+                }
+                break;
+        }
+
+    }
+
+    public interface OnFragmentInteractionListener {
+        void onFragmentInteraction();
+    }
 }
