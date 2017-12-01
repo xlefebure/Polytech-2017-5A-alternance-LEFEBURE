@@ -1,0 +1,33 @@
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    tools:context="com.example.xavier.tp1.BeerListFragment">
+
+    <ImageView
+        android:id="@+id/ImageBeer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="17dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/BeerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ImageBeer"
+        android:layout_alignTop="@id/ImageBeer"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/BeerContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ImageBeer"
+        android:layout_below="@+id/BeerName"
+        android:text="TextView" />
+</android.widget.RelativeLayout>

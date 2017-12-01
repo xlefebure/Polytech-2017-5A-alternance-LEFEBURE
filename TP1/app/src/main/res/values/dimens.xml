@@ -1,6 +1,6 @@
 <resources>
     <dimen name="guideLine">0.5</dimen>
-    <dimen name="guideLineBeer">0.2</dimen>
+    <dimen name="guideLineBeer">0.25</dimen>
 
     <dimen name="marginStartSmall">8dp</dimen>
     <dimen name="marginEndSmall">8dp</dimen>

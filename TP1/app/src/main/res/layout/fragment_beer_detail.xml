@@ -1,0 +1,67 @@
+
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MenuFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.xavier.tp1.BeerDetailFragment">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/guideLineBeer" />
+
+    <ImageView
+        android:id="@+id/imageBeerDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/marginEndSmall"
+        android:layout_marginStart="@dimen/marginStartSmall"
+        android:layout_marginTop="@dimen/marginTopSmall"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleBeerDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartSmall"
+        android:layout_marginTop="@dimen/marginTopSmall"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/descriptionBeerDetail"
+        android:layout_width="@dimen/width_null"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/marginEndSmall"
+        android:layout_marginStart="@dimen/marginStartSmall"
+        android:layout_marginTop="@dimen/marginTopSmall"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBeerDetail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/dateNaissanceBeerDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartSmall"
+        android:layout_marginTop="@dimen/marginTopSmall"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/titleBeerDetail" />
+
+</android.support.constraint.ConstraintLayout>

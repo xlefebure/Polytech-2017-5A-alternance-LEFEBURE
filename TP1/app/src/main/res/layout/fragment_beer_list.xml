@@ -9,22 +9,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.xavier.tp1.BeerListFragment">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="@dimen/guideLineBeer" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="29dp" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="@dimen/marginStartSmall"
+        tools:layout_editor_absoluteY="@dimen/marginStartSmall"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

@@ -13,7 +13,7 @@ import android.util.Log;
  * Created by Epulapp on 29/11/2017.
  */
 
-public class FragmentContainer extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener {
+public class FragmentContainer extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener, BeerListFragment.OnClickBeerListener {
 
     private  BroadcastReceiver receiver;
 
@@ -85,5 +85,10 @@ public class FragmentContainer extends AppCompatActivity implements MenuFragment
         FragmentManager fm  = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction().replace(id, fragment);
         ft.commit();
+    }
+
+    @Override
+    public void OnClickBeer(Beer b) {
+        replaceFragment(R.id.FragmentContainer, BeerDetailFragment.newInstance(b));
     }
 }
