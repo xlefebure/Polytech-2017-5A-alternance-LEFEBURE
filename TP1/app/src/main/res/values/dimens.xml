@@ -1,20 +1,34 @@
 <resources>
     <dimen name="guideLine">0.5</dimen>
     <dimen name="guideLineBeer">0.25</dimen>
+    <dimen name="guideLineBeer50">0.50</dimen>
+    <dimen name="guideLineBeer75">0.75</dimen>
 
     <dimen name="marginStartSmall">8dp</dimen>
     <dimen name="marginEndSmall">8dp</dimen>
     <dimen name="marginTopSmall">8dp</dimen>
+    <dimen name="marginBottomSmall">8dp</dimen>
 
     <dimen name="marginStartMedium">16dp</dimen>
     <dimen name="marginEndMedium">16dp</dimen>
     <dimen name="marginTopMedium">16dp</dimen>
+    <dimen name="marginBottomMedium">16dp</dimen>
 
     <dimen name="marginStartHigh">32dp</dimen>
     <dimen name="marginEndHigh">32dp</dimen>
     <dimen name="marginTopHigh">32dp</dimen>
+    <dimen name="marginBottomHigh">32dp</dimen>
 
     <dimen name="width_null">0dp</dimen>
 
     <dimen name="menu_btn_width">0dp</dimen>
+
+
+    <dimen name="font_size_high">18sp</dimen>
+
+    <dimen name="weight3">3</dimen>
+    <dimen name="weight1">1</dimen>
+
+
+    <dimen name="padding5">5dp</dimen>
 </resources>

@@ -10,14 +10,25 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class BeerListFragment extends Fragment {
 
     OnClickBeerListener mListener;
 
+    private BeerAPI beerAPI;
+
     private ListView mListBeer = null;
 
-    private Beer[] mBeers = new Beer[10];
+    private List<Beer> lBeers;
+
+    private myArrayAdapter adapter;
+
 
     @Override
     public void onAttach(Context context) {
@@ -40,24 +51,28 @@ public class BeerListFragment extends Fragment {
         mListBeer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("Appui", "Click on " + i);
-                mListener.OnClickBeer(mBeers[i]);
+                mListener.OnClickBeer(lBeers.get(i));
             }
         });
 
+        if (beerAPI == null) {
+            beerAPI = new BeerAPI();
+        }
+        beerAPI.getBeerList(1,50).enqueue(new Callback<List<Beer>>() {
+            @Override
+            public void onResponse(Call<List<Beer>> call, Response<List<Beer>> response) {
+                if (response.isSuccessful()) {
+                    lBeers = response.body();
+                    adapter = new myArrayAdapter(getContext(), R.layout.list_entity_layout, response.body());
+                    mListBeer.setAdapter(adapter);
+                }
+            }
 
-        mBeers[0] = new Beer();
-        mBeers[1] = new Beer();
-        mBeers[2] = new Beer();
-        mBeers[3] = new Beer();
-        mBeers[4] = new Beer();
-        mBeers[5] = new Beer();
-        mBeers[6] = new Beer();
-        mBeers[7] = new Beer();
-        mBeers[8] = new Beer();
-        mBeers[9] = new Beer();
-        mListBeer.setAdapter(new myArrayAdapter(getContext(), R.layout.list_entity_layout, mBeers));
-        //mListBeer.setItemChecked(0, true);
+            @Override
+            public void onFailure(Call<List<Beer>> call, Throwable t) {
+                Log.d("Failure", t.getLocalizedMessage());
+            }
+        });
 
         return view;
     }
